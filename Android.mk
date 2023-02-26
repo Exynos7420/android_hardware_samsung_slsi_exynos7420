@@ -18,9 +18,9 @@ ifeq ($(TARGET_BOARD_PLATFORM), exynos5)
 ifeq ($(TARGET_SLSI_VARIANT), bsp)
 ifeq ($(TARGET_SOC), exynos7420)
 exynos7420_dirs := \
-	mobicore \
 	libgatekeeper \
 	libkeymaster \
+	mobicore \
 
 #ifeq ($(BOARD_BACK_CAMERA_USES_EXTERNAL_CAMERA), true)
 #exynos7420_dirs += \

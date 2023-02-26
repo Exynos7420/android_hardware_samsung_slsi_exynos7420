@@ -69,12 +69,13 @@ LOCAL_C_INCLUDES +=  $(LOCAL_PATH)/../../../../Common/include
 
 LOCAL_MODULE    := libcommonpawrapper
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
 
 ifeq ($(ROOTPA_MODULE_TEST), 1)
     LOCAL_STATIC_LIBRARIES += provisioningagent_test
     LOCAL_STATIC_LIBRARIES += McStub
 else
-    LOCAL_STATIC_LIBRARIES += provisioningagent
+#    LOCAL_STATIC_LIBRARIES += provisioningagent
 
     LOCAL_SHARED_LIBRARIES  += libMcClient
     LOCAL_SHARED_LIBRARIES  += libMcRegistry
