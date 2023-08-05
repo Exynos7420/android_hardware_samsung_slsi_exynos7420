@@ -45,7 +45,7 @@ public:
 
 struct ExynosCamera3SensorIMX240_2P2 : public ExynosCamera3SensorIMX240_2P2Base {
 public:
-    ExynosCamera3SensorIMX240_2P2(int sensorId);
+    ExynosCamera3SensorIMX240_2P2();
 };
 
 struct ExynosCamera3SensorS5K4E6 : public ExynosCamera3SensorS5K4E6Base {
