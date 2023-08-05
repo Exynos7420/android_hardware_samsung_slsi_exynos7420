@@ -34,6 +34,8 @@
 #include "SecCameraConfig-common.h"
 #endif /* CAMERA_GED_FEATURE */
 
+#define SMDK7870
+
 #ifndef USE_VENDOR_SPECIFIC_CONFIG_HEADER
 
 #define MONITOR_LOG_SYNC
@@ -50,8 +52,8 @@
 #endif
 
 #ifdef SAMSUNG_COMPANION
-#define MAIN_CAMERA_USE_SAMSUNG_COMPANION   (true)
-#define FRONT_CAMERA_USE_SAMSUNG_COMPANION  (true)
+#define MAIN_CAMERA_USE_SAMSUNG_COMPANION   (false)
+#define FRONT_CAMERA_USE_SAMSUNG_COMPANION  (false)
 #endif
 
 #include <math.h>
@@ -75,7 +77,7 @@
 #define LCD_SIZE_1280_720               (2)
 #define LCD_SIZE_1920_1080              (3)
 #define LCD_SIZE_2560_1440              (4)
-#define CAMERA_LCD_SIZE                 LCD_SIZE_2560_1440
+#define CAMERA_LCD_SIZE                 LCD_SIZE_1280_720
 
 /* #define LIMIT_SCP_SIZE_UNTIL_FHD_ON_CAPTURE */   /* Even if LCD is bigger than FHD, limit scp size until FHD on capture preview  */
 #define LIMIT_SCP_SIZE_UNTIL_FHD_ON_RECORDING /* Even if LCD is bigger than FHD, limit scp size until FHD on recording preview*/
@@ -259,7 +261,8 @@ enum REPROCESSING_BAYER_MODE {
 #define SENSOR_FW_PATH_BACK "/sys/class/camera/rear/rear_camfw"
 #define SENSOR_FW_PATH_FRONT "/sys/class/camera/front/front_camfw"
 
-#define TORCH_REAR_FILE_PATH "/sys/devices/virtual/camera/flash/rear_flash"
+#define TORCH_REAR_FILE_PATH "/sys/devices/14400000.fimc_is/torch/flash_torch_control"
+#define TORCH_FRONT_FILE_PATH "/sys/devices/14400000.fimc_is/torch/flash_torch_control"
 
 #define SUPPORT_64BITS
 
